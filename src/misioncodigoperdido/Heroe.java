@@ -57,7 +57,7 @@ import java.util.Scanner;
 	                    break;
 	                default:
 	                    System.out.println("Opcion invalida, intenta de nuevo.");
-	                    // coreccion para recibir de nuevo al salir del menu de forjar arma
+	                    // coreccion para recibir de nuevo al salir del menu de forjar arma o hechizo
 	            }
 	        }
 	    }
