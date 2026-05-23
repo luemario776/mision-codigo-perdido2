@@ -26,7 +26,7 @@ public class Nexo {
 
 	        Heroe heroe = new Heroe(nombre, nivel, poder);
 	        heroe.menu();
-	        //Actualizacion del nexo ,coreccion de errores y mejoras en la experiencia del usuario
+	        // Actualizaciones del nexo
 	    }
 	}
 
