@@ -25,9 +25,29 @@ public class Nexo {
 	        System.out.println("Nivel: " + nivel + " | Poder: " + poder);
 
 	        Heroe heroe = new Heroe(nombre, nivel, poder);
-	        heroe.menu();
+	        heroe.menu(scanner);
 	        // Actualizaciones del nexo
 	    }
-	}
+	public static void iniciar() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("╔══════════════════════════════════════╗");
+        System.out.println("║   Forja tu Arma en el Reino de Java! ║");
+        System.out.println("╚══════════════════════════════════════╝");
+
+        System.out.print("Ingresa el nombre de tu poder: ");
+        String nombre = scanner.nextLine();
+
+        System.out.print("Ingresa el daño de tu poder: ");
+        int danio = scanner.nextInt();
+
+        System.out.println("\nEl poder " + nombre + " ha sido forjado!");
+        System.out.println("Daño: " + danio);
+
+        Poder poder = new Poder(nombre, danio);
+        poder.menu(scanner);
+    }
+ }
+	
 
 

@@ -26,17 +26,17 @@ import java.util.Scanner;
 	        System.out.println("═══════════════════════════════");
 	    }
 
-	    public void menu() {
-	        Scanner scanner = new Scanner(System.in);
+	    public void menu(Scanner scanner) {
 	        int opcion = 0;
 
-	        while (opcion != 3) {
+	        while (opcion != 4) {
 	            System.out.println("\n╔══════════════════════════════╗");
 	            System.out.println("║     MENU DEL HEROE           ║");
 	            System.out.println("╠══════════════════════════════╣");
 	            System.out.println("║  1. Ver mis stats            ║");
 	            System.out.println("║  2. Entrenar                 ║");
-	            System.out.println("║  3. Salir                    ║");
+	            System.out.println("║  3. Forjar un arma           ║");
+	            System.out.println("║  4. Salir                    ║");
 	            System.out.println("╚══════════════════════════════╝");
 	            System.out.print("Elige una opcion: ");
 
@@ -50,12 +50,15 @@ import java.util.Scanner;
 	                    entrenar();
 	                    break;
 	                case 3:
+	                    Poder.iniciar(scanner);
+	                    break;
+	                case 4:
 	                    System.out.println("Hasta la proxima, " + nombre + "!");
 	                    break;
 	                default:
 	                    System.out.println("Opcion invalida, intenta de nuevo.");
+	                    // coreccion para recibir de nuevo al salir del menu de forjar arma
 	            }
 	        }
-	        scanner.close();
 	    }
 }

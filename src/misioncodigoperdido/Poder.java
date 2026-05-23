@@ -5,13 +5,12 @@ public class Poder {
 	  String nombre;
 	    int danio;
 
-	    public static void iniciar() {
-	        Scanner scanner = new Scanner(System.in);
-
+	    public static void iniciar(Scanner scanner) {
 	        System.out.println("╔══════════════════════════════════════╗");
 	        System.out.println("║   Forja tu Arma en el Reino de Java! ║");
 	        System.out.println("╚══════════════════════════════════════╝");
 
+	        scanner.nextLine();
 	        System.out.print("Ingresa el nombre de tu poder: ");
 	        String nombre = scanner.nextLine();
 
@@ -22,7 +21,7 @@ public class Poder {
 	        System.out.println("Daño: " + danio);
 
 	        Poder poder = new Poder(nombre, danio);
-	        poder.menu();
+	        poder.menu(scanner);
 	    }
 
 	    public Poder(String nombre, int danio) {
@@ -41,8 +40,7 @@ public class Poder {
 	        System.out.println("═══════════════════════════════");
 	    }
 
-	    public void menu() {
-	        Scanner scanner = new Scanner(System.in);
+	    public void menu(Scanner scanner) {
 	        int opcion = 0;
 
 	        while (opcion != 3) {
@@ -69,8 +67,9 @@ public class Poder {
 	                    break;
 	                default:
 	                    System.out.println("Opcion invalida, intenta de nuevo.");
+	                    // correcion de error para enviar al usuario al menu de heroe
 	            }
 	        }
-	        scanner.close();
 	    }
 }
+                  
