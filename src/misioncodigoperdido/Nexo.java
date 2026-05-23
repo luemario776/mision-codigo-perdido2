@@ -46,6 +46,7 @@ public class Nexo {
 
         Poder poder = new Poder(nombre, danio);
         poder.menu(scanner);
+        // modificacion del nexo para resolver errores
     }
  }
 	
